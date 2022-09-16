@@ -1,6 +1,6 @@
-package Repository;
+package com.example.zoraweb.Repository;
 
-import Models.frymaster.Entrees;
+import com.example.zoraweb.frymaster.Entrees;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EntreeRepository extends JpaRepository<Entrees,Long> {

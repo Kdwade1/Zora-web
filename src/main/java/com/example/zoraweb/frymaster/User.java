@@ -1,4 +1,4 @@
-package Models.frymaster;
+package com.example.zoraweb.frymaster;
 
 import javax.persistence.*;
 
@@ -39,7 +39,7 @@ public class User {
         this.email = email;
     }
 
-    public User() {
+    public User(User user) {
 
     }
 
