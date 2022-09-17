@@ -1,4 +1,4 @@
-package com.example.zoraweb.frymaster;
+package com.example.zoraweb.Models.frymaster;
 
 import javax.persistence.*;
 
@@ -11,7 +11,7 @@ public class User {
     private long id;
 
     @Column(nullable = false)
-    private String fry_user;
+    private String username;
 
     @Column(nullable = false)
     private String password;
@@ -24,16 +24,16 @@ public class User {
 
 
 
-    public User(long id, String fry_user, String password, String profile_img, String email) {
+    public User(long id, String username, String password, String profile_img, String email) {
         this.id = id;
-        this.fry_user = fry_user;
+        this.username = username;
         this.password = password;
         this.profile_img = profile_img;
         this.email = email;
     }
 
-    public User(String fry_user, String password, String profile_img, String email) {
-        this.fry_user = fry_user;
+    public User(String username, String password, String profile_img, String email) {
+        this.username = username;
         this.password = password;
         this.profile_img = profile_img;
         this.email = email;
@@ -41,6 +41,9 @@ public class User {
 
     public User(User user) {
 
+    }
+
+    public User() {
     }
 
     public long getId() {
@@ -51,12 +54,12 @@ public class User {
         this.id = id;
     }
 
-    public String getFry_user() {
-        return fry_user;
+    public String getusername() {
+        return username;
     }
 
-    public void setFry_user(String fry_user) {
-        this.fry_user = fry_user;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {

@@ -1,4 +1,4 @@
-package com.example.zoraweb.frymaster;
+package com.example.zoraweb.Models.frymaster;
 
 import javax.persistence.*;
 

@@ -1,5 +1,6 @@
 package com.example.zoraweb.config;
 
+import com.example.zoraweb.services.UserDetailsLoader;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,7 +16,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 public class SecurityConfig {
     private UserDetailsLoader userDetailsLoader;
 
-    public SecurityConfiguration(UserDetailsLoader userDetailsLoader) {
+    public SecurityConfig(UserDetailsLoader userDetailsLoader) {
         this.userDetailsLoader = userDetailsLoader;
     }
 
@@ -50,4 +51,4 @@ public class SecurityConfig {
         return httpSecurity.build();
     }
 }
-}
+

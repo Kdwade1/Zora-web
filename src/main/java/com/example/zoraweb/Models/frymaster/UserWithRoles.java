@@ -1,6 +1,5 @@
-package com.example.capstone.models;
+package com.example.zoraweb.Models.frymaster;
 
-import com.example.zoraweb.frymaster.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -28,7 +27,7 @@ public class UserWithRoles extends User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return user.getFry_user();
+        return user.getusername();
     }
 
     @Override
