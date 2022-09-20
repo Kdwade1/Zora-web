@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Fry Master</title>
+    <link rel="stylesheet"href="/css/global.css">
 </head>
 <body>
-<h1> Hello world</h1>
+<nav>
+    <a href="/register">Register</a>
+    <a href="/login">Login</a>
+    <a href="/logout">logout</a>
+    <a href="/menu">Menu</a>
+    <a href="/locate">Locate</a>
+</nav>
+
+<div class="container">
+    <div class="circle">
+<img src="/img/fryboy.jpg" alt="pic" class="fryboy">
+        <div class="text">
+            <p>Fry-Masters is Fry Heaven</p>
+        </div>
+
+    </div>
+    <div class="reg-button">
+        <a href="/register"><button>Click me</button></a>
+    </div>
+</div>
+<!--<div class="reg-button">-->
+<!--    <a href="/register"><button>Click me</button></a>-->
+<!--</div>-->
+<script>
+    const text= document.querySelector('.text p');
+    text.innerHTML = text.innerText.split("").map(
+        (char,i)=>`<span style="transform:rotate(${i * 13}deg)">${char}</span>`
+    ).join("")
+</script>
 </body>
 </html>
