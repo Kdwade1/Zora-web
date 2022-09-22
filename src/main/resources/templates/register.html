@@ -6,8 +6,11 @@
 <body>
 <h1> This is register page</h1>
 <form th:action="@{/register} "th:method="POST">
-    <label th:for="username" ></label>
+    <label th:for="username" >Username</label>
     <input type="text" th:name="username">
+    <label th:for="email">Email</label>
+    <input type="email" th:name="email">
+    <label th:for="password">Password</label>
 </form>
 </body>
 </html>

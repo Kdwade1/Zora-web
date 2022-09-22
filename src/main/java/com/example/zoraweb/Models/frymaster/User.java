@@ -10,7 +10,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String username;
 
     @Column(nullable = false)
@@ -19,7 +19,7 @@ public class User {
     @Column
     private String profile_img;
 
-    @Column(nullable = false)
+    @Column(nullable = false,unique = true)
     private String email;
 
     @Column(nullable= false)
@@ -34,11 +34,17 @@ public class User {
     @Column(nullable=false)
     private String state;
 
+    @Column
+    private String verificationCode;
+
+    @Column
+    private boolean enable;
+
 
     public User(User user) {
     }
 
-    public User(long id, String username, String password, String profile_img, String email, long zipcode, String address, String city, String state) {
+    public User(long id, String username, String password, String profile_img, String email, long zipcode, String address, String city, String state, String verificationCode, boolean enable) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -48,9 +54,11 @@ public class User {
         this.address = address;
         this.city = city;
         this.state = state;
+        this.verificationCode = verificationCode;
+        this.enable = enable;
     }
 
-    public User(String username, String password, String profile_img, String email, long zipcode, String address, String city, String state) {
+    public User(String username, String password, String profile_img, String email, long zipcode, String address, String city, String state, String verificationCode, boolean enable) {
         this.username = username;
         this.password = password;
         this.profile_img = profile_img;
@@ -59,6 +67,8 @@ public class User {
         this.address = address;
         this.city = city;
         this.state = state;
+        this.verificationCode = verificationCode;
+        this.enable = enable;
     }
 
     public User() {
@@ -138,5 +148,21 @@ public class User {
 
     public void setState(String state) {
         this.state = state;
+    }
+
+    public String getVerificationCode() {
+        return verificationCode;
+    }
+
+    public void setVerificationCode(String verificationCode) {
+        this.verificationCode = verificationCode;
+    }
+
+    public boolean isEnable() {
+        return enable;
+    }
+
+    public void setEnable(boolean enable) {
+        this.enable = enable;
     }
 }
