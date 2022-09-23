@@ -15,6 +15,9 @@ public class Entrees {
     @Column
     private String entree_image;
 
+    @Column
+    private double price;
+
     public Entrees() {
     }
 

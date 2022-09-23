@@ -25,13 +25,13 @@ public class User {
     @Column(nullable= false)
     private long zipcode;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String address;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String city;
 
-    @Column(nullable=false)
+    @Column(nullable = true)
     private String state;
 
     @Column

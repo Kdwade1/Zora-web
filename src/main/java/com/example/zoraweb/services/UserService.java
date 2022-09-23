@@ -40,7 +40,7 @@ public class UserService {
 
     private void sendVerificationEmail(User user, String siteURL)throws MessagingException,UnsupportedEncodingException {
         String toAddress= user.getEmail();
-        String fromAddress= "fryhaven@gmail.com";
+        String fromAddress= "fryhaven2@gmail.com";
         String senderName="fryhaven";
         String subject ="Verification code!";
         String content ="Welcome to fryhaven [[name]],<br>"+"We hope you enjoy all of the fries!. Please click on the link below to verify your account!<br>"+"<h3><a href=\" [[URL]]\" target =\"_self\">VERIFY</a></h3>"+"Thank you!<br>"+"Fryhaven";
