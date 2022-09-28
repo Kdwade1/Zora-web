@@ -46,12 +46,7 @@ public class UserWithRoles extends User implements UserDetails {
     }
 
     @Override
-    public boolean isEnabled() {
-        return false;
-    }
+    public boolean isEnabled() {return  user.isEnable();}
 
-//    @Override
-//    public boolean isEnabled() {
-//        return user.isEnabled();
-//    }
+
 }
