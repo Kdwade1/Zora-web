@@ -14,10 +14,16 @@ public class Fries {
     String fry_type;
 
     @Column
-    private long stock;
+    private String fry_img;
 
     @Column
-    private String fry_img;
+    private double price;
+
+    @Column
+    private long quantity;
+
+    @Column
+    private String size;
 
 
 
@@ -25,17 +31,21 @@ public class Fries {
     public Fries() {
     }
 
-    public Fries(long id, String fry_type, long stock, String fry_img) {
+    public Fries(long id, String fry_type, String fry_img, double price, long quantity, String size) {
         this.id = id;
         this.fry_type = fry_type;
-        this.stock = stock;
         this.fry_img = fry_img;
+        this.price = price;
+        this.quantity = quantity;
+        this.size = size;
     }
 
-    public Fries(String fry_type, long stock, String fry_img) {
+    public Fries(String fry_type, String fry_img, double price, long quantity, String size) {
         this.fry_type = fry_type;
-        this.stock = stock;
         this.fry_img = fry_img;
+        this.price = price;
+        this.quantity = quantity;
+        this.size = size;
     }
 
     public long getId() {
@@ -54,13 +64,6 @@ public class Fries {
         this.fry_type = fry_type;
     }
 
-    public long getStock() {
-        return stock;
-    }
-
-    public void setStock(long stock) {
-        this.stock = stock;
-    }
 
     public String getFry_img() {
         return fry_img;
@@ -68,5 +71,29 @@ public class Fries {
 
     public void setFry_img(String fry_img) {
         this.fry_img = fry_img;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public long getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(long quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
     }
 }
