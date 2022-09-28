@@ -34,19 +34,19 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
                 .formLogin()
-                .loginPage("/login*")
-                .defaultSuccessUrl("/profile")
+                .loginPage("/login")
+                .defaultSuccessUrl("/")
                 .permitAll()
                 .and()
                 .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .logoutSuccessUrl("/login?logout")
                 .and()
                 .authorizeRequests()
-                .antMatchers("/", "/register", "/browse", "/all-events")
+                .antMatchers("/", "/register",  "/index")
                 .permitAll()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/events/create")
+                .antMatchers("/menu")
                 .authenticated();
         return httpSecurity.build();
     }

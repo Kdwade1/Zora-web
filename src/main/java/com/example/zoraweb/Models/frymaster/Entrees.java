@@ -18,6 +18,7 @@ public class Entrees {
     @Column
     private double price;
 
+
     public Entrees() {
     }
 
