@@ -1,6 +1,7 @@
 package Learning;
 
 public class Big_O {
+
     public static void log(int[] numbers, String [] names){
 //        O(1) Means constant time
         System.out.println(numbers[0]);

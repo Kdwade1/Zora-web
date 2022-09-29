@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="${title}"></title>
+</head>
+<body>
+<nav th:fragment="navbar">
+    <a href="/register">Register</a>
+    <a href="/login">Login</a>
+    <a href="/logout">logout</a>
+    <a href="/menu">Menu</a>
+    <a href="/locate">Locate</a>
+</nav>
+</body>
+</html>
