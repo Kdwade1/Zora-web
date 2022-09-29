@@ -1,0 +1,106 @@
+.nav-list {
+    list-style-type: none;
+    background-color: goldenrod;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+}
+.nav-item
+{
+    display: inline;
+
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+
+.nav-item:last-child {
+    border-right: none;
+}
+.nav-link{
+    display: block;
+    padding: 8px;
+    background-color: goldenrod;
+}
+.nav-item .nav-link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.nav-item .nav-link:hover {
+    background-color: red;
+}
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*width: 100%;*/
+    min-height: 100vh;
+
+}
+.container circle{
+    align-items: center;
+    justify-content: center;
+}
+.circle{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width:200px;
+    height:200px;
+
+    border-radius: 50%;
+}
+.circle button{
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: center;
+}
+.fryboy{
+    position:absolute;
+    width:150px;
+    height: 150px;
+    background-size: cover;
+    border-radius: 50%;
+}
+.text{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    justify-content: flex-end;
+    color:goldenrod;
+    animation:rotateText 10s linear infinite;
+}
+@keyframes rotateText {
+    0%{
+        transform:rotate(360deg);
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+}
+.text span{
+    position: absolute;
+    left: 50%;
+    font-size:1.5em;
+    transform-origin: 0 100px;
+
+}
+.reg-button{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:1em
+}
+
+
