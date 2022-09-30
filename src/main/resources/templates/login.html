@@ -2,8 +2,10 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security"><head>
     <meta charset="UTF-8">
     <title>hey</title>
-</head>
+    <head th:replace="partials/fragments::head('FryHaven')">
 <body>
+<nav th:replace="partials/fragments::navbar">
+</nav>
 <div th:if="${param.error}">
     Invalid Username and Password.
 </div>
