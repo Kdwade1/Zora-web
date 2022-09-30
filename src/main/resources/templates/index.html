@@ -1,24 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="partials/fragments::head('FryHaven')">
     <meta charset="UTF-8">
     <title>Fry Master</title>
     <link rel="stylesheet"href="/css/global.css">
 </head>
 <body>
-<nav>
-    <a href="/register">Register</a>
-    <a href="/login">Login</a>
-    <a href="/logout">logout</a>
-    <a href="/menu">Menu</a>
-    <a href="/locate">Locate</a>
+<nav th:replace="partials/fragments::navbar">
+
 </nav>
 
 <div class="container">
     <div class="circle">
 <img src="/img/fryboy.jpg" alt="pic" class="fryboy">
         <div class="text">
-            <p>Fry-Masters is Fry Heaven</p>
+            <p>Fry Haven We Have All The Fries</p>
         </div>
 
     </div>
@@ -32,7 +28,7 @@
 <script>
     const text= document.querySelector('.text p');
     text.innerHTML = text.innerText.split("").map(
-        (char,i)=>`<span style="transform:rotate(${i * 13}deg)">${char}</span>`
+        (char,i)=>`<span style="transform:rotate(${i * 11.25}deg)">${char}</span>`
     ).join("")
 </script>
 </body>

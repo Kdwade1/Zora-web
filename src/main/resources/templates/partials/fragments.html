@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <link href="/css/navbar.css" rel="stylesheet">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="${title}"></title>
+</head>
+<body>
+<nav th:fragment="navbar" id="navbar">
+    <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link "href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+    <li class="nav-item"><a  class="nav-link" href="/login">Login</a></li>
+   <li class="nav-item"><a class="nav-link" href="/logout">logout</a></li>
+    <li class="nav-item"><a class="nav-link" href="/menu">Menu</a></li>
+   <li class="nav-item"><a class="nav-link" href="/location">Locate</a></li>
+    </ul>
+</nav>
+</body>
+</html>

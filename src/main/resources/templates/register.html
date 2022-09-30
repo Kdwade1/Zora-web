@@ -2,8 +2,9 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security"><head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
-<body>
+    <head th:replace="partials/fragments::head('FryHaven')"><body>
+<nav th:replace="partials/fragments::navbar">
+</nav>
 <h1> This is register page</h1>
 <form th:action="@{/register} "th:method="POST">
     <label th:for="username" >Username</label>
